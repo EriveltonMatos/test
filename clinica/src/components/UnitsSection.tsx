@@ -105,51 +105,51 @@ export default function UnitsSection() {
 
   return (
     <>
-    <div
-      className="py-24 bg-blue-100 border-t-2 border-sky-50"
-      style={{
-        backgroundImage: `url(${unitsBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="relative container mx-auto ">
-        <div>
-        <ScrollRevealComponent
-                origin="bottom"
-                distance="100px"
-                duration={1000}
-                reset={false}
-              >
-          <h1 className="text-[#1F2B6C] text-5xl md:text-6xl font-bold mb-8 mt-16 text-center">
-            Nossas <span className="text-[#159EEC]">Unidades</span>
-            <div className="flex justify-center mt-4 space-x-4">
-              <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
-              <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
-              <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
+      <div
+        className="py-24 bg-blue-100 border-t-2 border-sky-50"
+        style={{
+          backgroundImage: `url(${unitsBackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="relative container mx-auto ">
+          <div>
+            <ScrollRevealComponent
+              origin="bottom"
+              distance="100px"
+              duration={1000}
+              reset={false}
+            >
+              <h1 className="text-[#1F2B6C] text-5xl md:text-6xl font-bold mb-8 mt-16 text-center">
+                Nossas <span className="text-[#159EEC]">Unidades</span>
+                <div className="flex justify-center mt-4 space-x-4">
+                  <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
+                  <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
+                  <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
+                </div>
+              </h1>
+            </ScrollRevealComponent>
+          </div>
+          <ScrollRevealComponent
+            origin="bottom"
+            distance="100px"
+            duration={1000}
+            reset={false}
+          >
+            <div className="card container mx-auto">
+              <Carousel
+                value={images}
+                numVisible={3}
+                numScroll={3}
+                responsiveOptions={responsiveOptions}
+                circular
+                autoplayInterval={3000}
+                itemTemplate={imageTemplate}
+              />
             </div>
-          </h1>
           </ScrollRevealComponent>
         </div>
-        <ScrollRevealComponent
-                origin="bottom"
-                distance="100px"
-                duration={1000}
-                reset={false}
-              >
-        <div className="card container mx-auto">
-          <Carousel
-            value={images}
-            numVisible={3}
-            numScroll={3}
-            responsiveOptions={responsiveOptions}
-            circular
-            autoplayInterval={3000}
-            itemTemplate={imageTemplate}
-          />
-        </div>
-        </ScrollRevealComponent>
-      </div>
       </div>
     </>
   );
