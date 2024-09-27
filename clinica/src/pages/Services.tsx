@@ -1,171 +1,109 @@
-import hemograma from "../assets/exams/hemograma.jpg";
-import glicemia from "../assets/exams/glicemia.jpg";
 import ressonancia from "../assets/exams/ressonancia.jpeg";
-import InfoCard from "../components/InfoCard";
+import hemograma from "../assets/exams/hemograma.jpg";
+import colesterol from "../assets/exams/colesterol.jpg";
+import fezes from "../assets/exams/fezes.jpg";
+import glicemia from "../assets/exams/glicemia.jpg";
+import citologia from "../assets/exams/citologia.jpg";
+import InfoCardWithButton from "../components/InfoCardWithButton";
 import NavBar from "../components/Navbar";
-import ScrollRevealComponent from "../components/scroll-components/ScrollRevealComponent";
+import ImagingClinicCard from "../components/services-cards/ImagingClinicCard";
+import HealthClinicCard from "../components/services-cards/HealthClinicCard";
+import SecondNavbar from "../components/SecondNavbar";
+import unichristusNavbar from "../assets/u-unichristus.png";
+
 
 export default function Services() {
+  const links = [
+    { href: "/", label: "Voltar" },
+  ];
+  
   return (
     <>
       <div>
         <NavBar />
+        <SecondNavbar links={links} logoSrc={unichristusNavbar} />
       </div>
 
       <div className="container mx-auto max-w-screen-lg p-8 rounded-lg">
-        <ScrollRevealComponent
-          origin="bottom"
-          distance="100px"
-          duration={1000}
-          reset={false}
-        >
-          <h1 className="relative text-[#1F2B6C] items-center w-full h-20 text-5xl mt-28 md:text-6xl font-bold mb-4 text-center">
-            Nossos <span className="text-[#159EEC]">serviços</span>
-            <div className="flex justify-center mt-4 space-x-4">
-              <div className="w-3 h-3 bg-[#2A5ECB] rounded-full hover:scale-150 transition-all"></div>
-              <div className="w-3 h-3 bg-[#2A5ECB] rounded-full hover:scale-150 transition-all"></div>
-              <div className="w-3 h-3 bg-[#2A5ECB] rounded-full hover:scale-150 transition-all"></div>
-            </div>
-          </h1>
-        </ScrollRevealComponent>
-        <ScrollRevealComponent
-          origin="left"
-          distance="100px"
-          duration={1000}
-          reset={false}
-        >
-          <p className="relative text-[#1F2B6C] items-center w-full mt-10 h-20 text-5xl md:text-xl font-normal text-center">
-            Uma equipe completa e multidisciplinar para cuidar da sua saúde.
-          </p>
-        </ScrollRevealComponent>
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 text-center md:grid-cols-2 lg:grid-cols-3 gap-8 h-[16rem]">
-            <ScrollRevealComponent
-              origin="left"
-              distance="100px"
-              duration={1000}
-              reset={false}
-            >
-              <InfoCard
-                imageSrc={ressonancia}
-                title="Ressonância Magnética"
-                description="A ressonância magnética é uma técnica de imagem médica usada em radiologia para formar imagens da anatomia e dos processos fisiológicos do corpo, tanto na saúde como na doença."
-              />
-            </ScrollRevealComponent>
+        <h1 className="relative text-[#1F2B6C] items-center w-full h-20 text-5xl mt-24 md:text-6xl font-bold mb-4 text-center">
+          Nossos <span className="text-[#159EEC]">serviços</span>
+          <div className="flex justify-center mt-4 space-x-4">
+            <div className="w-3 h-3 bg-[#2A5ECB] rounded-full hover:scale-150 transition-all"></div>
+            <div className="w-3 h-3 bg-[#2A5ECB] rounded-full hover:scale-150 transition-all"></div>
+            <div className="w-3 h-3 bg-[#2A5ECB] rounded-full hover:scale-150 transition-all"></div>
+          </div>
+        </h1>
 
-            <ScrollRevealComponent
-              origin="left"
-              distance="100px"
-              duration={2000}
-              reset={false}
-            >
-              <InfoCard
-                imageSrc={glicemia}
-                title="Glicemia"
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
-              />
-            </ScrollRevealComponent>
+        <p className="relative text-[#1F2B6C] items-center w-full mt-10 h-20 text-5xl md:text-xl font-normal text-center">
+          Clique em um serviço para mais informações
+        </p>
 
-            <ScrollRevealComponent
-              origin="left"
-              distance="100px"
-              duration={3000}
-              reset={false}
-            >
-              <InfoCard
-                imageSrc={hemograma}
-                title="Hemograma"
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
-              />
-            </ScrollRevealComponent>
+        <div className="container mx-auto ">
+          <div className="grid grid-cols-1 text-center md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center min-h-[16rem] ">
+            <InfoCardWithButton
+              imageSrc={ressonancia}
+              title="Ressonância Magnética"
+              titleCard="Ressonância Magnética:"
+              description="A ressonância magnética (RM) é uma técnica de imagem médica que utiliza campos magnéticos e ondas de rádio para gerar imagens detalhadas dos órgãos e 
+              tecidos internos do corpo. Diferentemente de raios-X ou tomografias, a RM não usa radiação ionizante, o que a torna uma opção mais segura para muitos pacientes."
+              imageCard={ressonancia}
+              additionalContent={<ImagingClinicCard />}
+            />
+
+            <InfoCardWithButton
+              imageSrc={hemograma}
+              title="Hemograma Completo"
+              titleCard="Hemograma Completo"
+              description="O hemograma é um exame de sangue que fornece informações sobre os principais componentes do sangue, como glóbulos vermelhos, glóbulos brancos e plaquetas. 
+              Ele é útil para diagnosticar e monitorar diversas condições médicas."
+              imageCard={hemograma}
+              additionalContent={<ImagingClinicCard />}
+            />
+
+            <InfoCardWithButton
+              imageSrc={fezes}
+              title="Parasitológico de fezes"
+              titleCard="Parasitológico de fezes"
+              description="O exame parasitológico de fezes é um procedimento que identifica a presença de parasitas nas fezes, por meio de diversos métodos de análise. 
+              O exame é indicado para diagnosticar alterações gastrointestinais, causadas por protozoários e helmintos. "
+              imageCard={fezes}
+              additionalContent={<HealthClinicCard />}
+            />
           </div>
         </div>
 
         <div className="container mx-auto">
           <h1 className="text-[#1F2B6C] text-5xl md:text-5xl font-bold mb-8 font-yeseva tracking-wider text-center"></h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-[16rem]">
-            <ScrollRevealComponent
-              origin="right"
-              distance="100px"
-              duration={1000}
-              reset={false}
-            >
-              <InfoCard
-                imageSrc={hemograma}
-                title="ressonância "
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
-              />
-            </ScrollRevealComponent>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center min-h-[16rem]">
+            <InfoCardWithButton
+              imageSrc={glicemia}
+              title="Glicemia"
+              titleCard="Glicemia"
+              description="O exame de glicemia, também conhecido como exame de glicose, é um teste laboratorial que mede o nível de glicose no sangue. 
+              É um exame importante para o diagnóstico e monitoramento de diversas condições de saúde, principalmente diabetes."
+              imageCard={glicemia}
+              additionalContent={<HealthClinicCard />}
+            />
 
-            <ScrollRevealComponent
-              origin="right"
-              distance="100px"
-              duration={2000}
-              reset={false}
-            >
-              <InfoCard
-                imageSrc={hemograma}
-                title="Hemograma"
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
-              />
-            </ScrollRevealComponent>
+            <InfoCardWithButton
+              imageSrc={colesterol}
+              title="Colesterol Total"
+              titleCard="Colesterol Total"
+              description="No exame de colesterol total, uma amostra de sangue do paciente é retirada e posteriormente levada ao laboratório para que seja analisada. O técnico então 
+              irá avaliar a quantidade de colesterol LDL, HDL e VLDL que está presente na amostra de sangue e somar os valores, chegando ao valor do colesterol total."
+              imageCard={colesterol}
+              additionalContent={<HealthClinicCard />}
+            />
 
-            <ScrollRevealComponent
-              origin="right"
-              distance="100px"
-              duration={3000}
-              reset={false}
-            >
-              <InfoCard
-                imageSrc={hemograma}
-                title="Hemograma"
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
-              />
-            </ScrollRevealComponent>
-          </div>
-        </div>
-
-        <div className="container mx-auto">
-          <h1 className="text-[#1F2B6C] text-5xl md:text-5xl font-bold mb-8 font-yeseva tracking-wider text-center"></h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-[16rem]">
-            <ScrollRevealComponent
-              origin="right"
-              distance="100px"
-              duration={1000}
-              reset={false}
-            >
-              <InfoCard
-                imageSrc={hemograma}
-                title="ressonância "
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
-              />
-            </ScrollRevealComponent>
-
-            <ScrollRevealComponent
-              origin="right"
-              distance="100px"
-              duration={2000}
-              reset={false}
-            >
-              <InfoCard
-                imageSrc={hemograma}
-                title="Hemograma"
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
-              />
-            </ScrollRevealComponent>
-
-            <ScrollRevealComponent
-              origin="right"
-              distance="100px"
-              duration={3000}
-              reset={false}
-            >
-              <InfoCard
-                imageSrc={hemograma}
-                title="Hemograma"
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
-              />
-            </ScrollRevealComponent>
+            <InfoCardWithButton
+              imageSrc={citologia}
+              title="Citologia Convencional"
+              titleCard="Citologia convencional"
+              description="A citologia convencional, também conhecida como exame de Papanicolau, é um exame ginecológico preventivo que analisa células do colo do útero e da 
+              vagina para detectar alterações e lesões que possam indicar a presença de câncer"
+              imageCard={citologia}
+              additionalContent={<HealthClinicCard />}
+            />
           </div>
         </div>
       </div>

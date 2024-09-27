@@ -1,3 +1,4 @@
+import unichristusNavbar from "../assets/u-unichristus.png";
 import clinicaOdonto from "../assets/unidades/clinica-odonto.jpg";
 import clinicaSaude from "../assets/unidades/clinica-saude.jpg";
 import clinicaPsicologia from "../assets/unidades/clinica-psicologia.jpg";
@@ -7,12 +8,17 @@ import FooterSection from "../components/FooterSection";
 import NavBar from "../components/Navbar";
 import IconPhone from "../components/IconPhone";
 import ScrollRevealComponent from "../components/scroll-components/ScrollRevealComponent";
+import SecondNavbar from "../components/SecondNavbar";
 
 export default function Clinics() {
+  const links = [
+    { href: "/", label: "Voltar" },
+  ];
   return (
     <>
       <div>
         <NavBar />
+        <SecondNavbar links={links} logoSrc={unichristusNavbar} />
       </div>
       <section className="bg-gray-100 py-12">
         <h1 className="text-[#1F2B6C] text-5xl md:text-6xl font-bold mb-8 mt-20 text-center">

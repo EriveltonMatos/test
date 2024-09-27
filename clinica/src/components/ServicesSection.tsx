@@ -14,6 +14,7 @@ export default function ServicesSection() {
   };
 
   return (
+    <section id="services">
     <div
       className="py-24 bg-blue-100 border-t-2 border-sky-50"
       style={{
@@ -187,5 +188,6 @@ export default function ServicesSection() {
         </div>
       </div>
     </div>
+    </section>
   );
 }

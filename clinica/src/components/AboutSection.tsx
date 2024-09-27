@@ -6,6 +6,7 @@ import ScrollRevealComponent from "./scroll-components/ScrollRevealComponent";
 
 export default function AboutSection() {
   return (
+    <section id="about">
     <div
       className="relative py-24 bg-blue-100 border-t-2 border-sky-50"
       style={{
@@ -107,5 +108,6 @@ export default function AboutSection() {
         </div>
       </div>
     </div>
+    </section>
   );
 }

@@ -105,6 +105,7 @@ export default function UnitsSection() {
 
   return (
     <>
+    <section id="units">
       <div
         className="py-24 bg-blue-100 border-t-2 border-sky-50"
         style={{
@@ -151,6 +152,7 @@ export default function UnitsSection() {
           </ScrollRevealComponent>
         </div>
       </div>
+      </section>
     </>
   );
 }

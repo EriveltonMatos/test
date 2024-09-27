@@ -5,7 +5,7 @@ export default function ExamSection() {
   // Função que será chamada quando o botão for clicado
 
   return (
-    <div className="bg-sky-50 ">
+    <section id="exam" className="bg-sky-50 ">
       <div className="container mx-auto py-5">
         <div className="flex justify-center items-center p-20 gap-20">
           <div className="w-1/2 ml-20">
@@ -66,6 +66,6 @@ export default function ExamSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

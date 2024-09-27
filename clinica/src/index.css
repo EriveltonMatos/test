@@ -2,6 +2,8 @@
 
 @import 'primereact/resources/themes/lara-light-blue/theme.css';
 
+
+
 @layer tailwind-base {
   @tailwind base;
 }
@@ -23,4 +25,10 @@
 *::-webkit-scrollbar-thumb {
   background-color: #159EEC;
   border-radius: 14px;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
 }
