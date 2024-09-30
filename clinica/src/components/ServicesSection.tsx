@@ -1,8 +1,11 @@
+import ressonancia from "../assets/exams/ressonancia.jpeg";
 import hemograma from "../assets/exams/hemograma.jpg";
+import colesterol from "../assets/exams/colesterol.jpg";
+import fezes from "../assets/exams/fezes.jpg";
 import glicemia from "../assets/exams/glicemia.jpg";
+import citologia from "../assets/exams/citologia.jpg";
 import InfoCard from "./InfoCard";
 import backgroundService from "../assets/background-service.png";
-import ressonancia from "../assets/exams/ressonancia.jpeg";
 import { useNavigate } from "react-router-dom";
 import ScrollRevealComponent from "./scroll-components/ScrollRevealComponent";
 
@@ -25,7 +28,7 @@ export default function ServicesSection() {
     >
       <div className="container mx-auto max-w-screen-lg p-8 rounded-lg">
         <ScrollRevealComponent
-          origin="bottom"
+          origin="top"
           distance="100px"
           duration={1000}
           reset={false}
@@ -40,7 +43,7 @@ export default function ServicesSection() {
           </h1>
         </ScrollRevealComponent>
         <ScrollRevealComponent
-          origin="left"
+          origin="top"
           distance="100px"
           duration={1000}
           reset={false}
@@ -71,9 +74,9 @@ export default function ServicesSection() {
               reset={false}
             >
               <InfoCard
-                imageSrc={glicemia}
-                title="Glicemia"
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
+                imageSrc={hemograma}
+                title="Hemograma Completo"
+                description="O hemograma é um exame de sangue que fornece informações sobre os principais componentes do sangue, como glóbulos vermelhos, glóbulos brancos e plaquetas. "
               />
             </ScrollRevealComponent>
 
@@ -84,9 +87,9 @@ export default function ServicesSection() {
               reset={false}
             >
               <InfoCard
-                imageSrc={hemograma}
-                title="Hemograma"
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
+                imageSrc={fezes}
+                title="Parasitológico de fezes"
+                description="O exame parasitológico de fezes é um procedimento que identifica a presença de parasitas nas fezes, por meio de diversos métodos de análise. "
               />
             </ScrollRevealComponent>
           </div>
@@ -102,9 +105,9 @@ export default function ServicesSection() {
               reset={false}
             >
               <InfoCard
-                imageSrc={hemograma}
-                title="ressonância "
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
+                imageSrc={glicemia}
+                title="Glicemia "
+                description="O exame de glicemia, também conhecido como exame de glicose, é um teste laboratorial que mede o nível de glicose no sangue. "
               />
             </ScrollRevealComponent>
 
@@ -115,9 +118,9 @@ export default function ServicesSection() {
               reset={false}
             >
               <InfoCard
-                imageSrc={hemograma}
-                title="Hemograma"
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
+                imageSrc={colesterol}
+                title="Colesterol Total"
+                description="No exame de colesterol total, uma amostra de sangue do paciente é retirada e posteriormente levada ao laboratório para que seja analisada."
               />
             </ScrollRevealComponent>
 
@@ -128,9 +131,10 @@ export default function ServicesSection() {
               reset={false}
             >
               <InfoCard
-                imageSrc={hemograma}
+                imageSrc={citologia}
                 title="Hemograma"
-                description="O hemograma é um exame que avalia as células sanguíneas de um paciente, como hemácias, leucócitos e plaquetas."
+                description="Também conhecida como exame de Papanicolau, é um exame ginecológico preventivo que analisa células do colo do útero e da 
+              vagina para detectar alterações e lesões que possam indicar a presença de câncer."
               />
             </ScrollRevealComponent>
           </div>

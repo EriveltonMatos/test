@@ -12,13 +12,13 @@ import SecondNavbar from "../components/SecondNavbar";
 
 export default function Clinics() {
   const links = [
-    { href: "/", label: "Voltar" },
+    { href: "/", label: "Voltar", },
   ];
   return (
     <>
       <div>
         <NavBar />
-        <SecondNavbar links={links} logoSrc={unichristusNavbar} />
+        <SecondNavbar links={links} logoSrc={unichristusNavbar}/>
       </div>
       <section className="bg-gray-100 py-12">
         <h1 className="text-[#1F2B6C] text-5xl md:text-6xl font-bold mb-8 mt-20 text-center">
