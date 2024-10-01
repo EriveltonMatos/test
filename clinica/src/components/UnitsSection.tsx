@@ -14,35 +14,35 @@ export default function UnitsSection() {
       alt: "Clínica Escola de Odontologia",
       description:
         "Rua Vereador Paulo Mamede, 130 - Cocó, Fortaleza - CE, \n60192-350",
-      url: "https://www.google.com",
+      url: "https://www.google.com/maps/dir/?api=1&destination=Rua+Vereador+Paulo+Mamede,+130+-+Cocó,+Fortaleza+-+CE,+60192-350",
     },
     {
       src: clinicaSaude,
       alt: "Clínica Escola de Saúde",
       description:
         "Av. Padre Antônio Tomás, 3404 - Cocó, Fortaleza - CE, \n60192-120",
-      url: "https://www.google.com",
+      url: "https://www.google.com/maps/dir/?api=1&destination=Av.+Padre+Antônio+Tomás,+3404+-+Cocó,+Fortaleza+-+CE,+60192-120",
     },
     {
       src: clinicaPsicologia,
       alt: "Serviço Escola de Psicologia Aplicada (SEPA)",
       description:
         "Av. Des. Moreira, 2120 - Aldeota, Fortaleza - CE, 60170-002",
-      url: "https://www.google.com",
+      url: "https://www.google.com/maps/dir/?api=1&destination=Av.+Des.+Moreira,+2120+-+Aldeota,+Fortaleza+-+CE,+60170-002",
     },
     {
       src: clinicaFisioterapia,
       alt: "Clínica Escola de Fisioterapia",
       description:
         "Rua Vereador Paulo Mamede - Cocó, Fortaleza - CE, \n60192-350 ",
-      url: "https://www.google.com",
+      url: "https://www.google.com/maps/dir/?api=1&destination=Rua+Vereador+Paulo+Mamede+-+Cocó,+Fortaleza+-+CE,+60192-350",
     },
     {
       src: clinicaOdonto,
-      alt: "Red Velvet Cake",
+      alt: "Clínica Escola de Odontologia",
       description:
         "Rua Vereador Paulo Mamede - Cocó, Fortaleza - CE, \n60192-350",
-      url: "https://www.google.com",
+      url: "https://www.google.com/maps/dir/?api=1&destination=Rua+Vereador+Paulo+Mamede,+130+-+Cocó,+Fortaleza+-+CE,+60192-350",
     },
   ];
 
@@ -145,7 +145,7 @@ export default function UnitsSection() {
                 numScroll={3}
                 responsiveOptions={responsiveOptions}
                 circular
-                autoplayInterval={3000}
+                autoplayInterval={5000}
                 itemTemplate={imageTemplate}
               />
             </div>

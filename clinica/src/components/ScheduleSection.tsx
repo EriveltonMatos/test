@@ -9,8 +9,8 @@ export default function ScheduleSection() {
     <section id="schedule" className="relative flex justify-center items-center bg-gradient-to-r bg-[#F0F9FF] text-white overflow-hidden  p-10 ">
       <div className="flex justify-end container mx-auto relative p-20 w-[80rem] bg-gradient-to-r from-[#1a2a6c] to-[#2B3E70] via-[#1a2a6c] border border-[#00FFFF] rounded-2xl shadow-2xl overflow-hidden transition-transform duration-700 ease-in-out">
        
-        <div className="relative z-20 bg-[#1A2A6C] p-14 rounded-lg shadow-neon-left w-full max-w-lg  transition-transform transform hover:scale-110 duration-500 ease-in-out border border-[#00FFFF]">
-          <h2 className="flex justify-center items-center text-6xl font-extrabold mb-4 bg-gradient-to-r from-[#00FFFF] to-[#00FFFF] bg-clip-text text-transparent animate-pulse">
+        <div className="relative z-20 bg-[#1A2A6C] p-14 max-lg:p-5 rounded-lg shadow-neon-left w-full max-w-lg  transition-transform transform hover:scale-110 duration-500 ease-in-out border border-[#00FFFF]">
+          <h2 className="flex justify-center items-center text-6xl max-lg:text-4xl font-extrabold mb-4 bg-gradient-to-r from-[#00FFFF] to-[#00FFFF] bg-clip-text text-transparent animate-pulse">
             AGENDE SUA CONSULTA
           </h2>
           <p className="mb-6 text-lg text-gray-300">

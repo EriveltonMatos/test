@@ -48,12 +48,12 @@ export default function ServicesSection() {
           duration={1000}
           reset={false}
         >
-          <p className="relative text-[#1F2B6C] items-center w-full mt-10 h-20 text-5xl md:text-xl font-normal text-center">
+          <p className="relative text-[#1F2B6C] items-center w-full mt-10 h-20 text-5xl md:text-xl font-normal text-center max-lg:text-sm max-lg:mt-0">
             Uma equipe completa e multidisciplinar para cuidar da sua saúde.
           </p>
         </ScrollRevealComponent>
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 text-center md:grid-cols-2 lg:grid-cols-3 gap-8 h-[16rem]">
+          <div className="grid grid-cols-1 text-center md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[16rem] max-lg:h-[50rem] max-lg:w-auto">
             <ScrollRevealComponent
               origin="left"
               distance="100px"
@@ -97,7 +97,7 @@ export default function ServicesSection() {
 
         <div className="container mx-auto">
           <h1 className="text-[#1F2B6C] text-5xl md:text-5xl font-bold mb-8 font-yeseva tracking-wider text-center"></h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-[16rem]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-[16rem] min-h-[16rem] max-lg:h-[50rem] max-lg:w-auto">
             <ScrollRevealComponent
               origin="right"
               distance="100px"

@@ -8,7 +8,7 @@ export default function AboutSection() {
   return (
     <section id="about">
     <div
-      className="relative py-24 bg-blue-100 border-t-2 border-sky-50"
+      className="relative py-24 bg-blue-100 border-t-2 border-sky-50  "
       style={{
         backgroundImage: `url(${unichristus})`,
         backgroundSize: "cover",
@@ -26,7 +26,7 @@ export default function AboutSection() {
                 duration={1000}
                 reset={false}
               >
-                <h2 className="text-white tracking-widest text-7xl font-bold mb-5 ">
+                <h2 className="text-white tracking-widest text-7xl font-bold mb-5 max-lg:text-4xl">
                   CLÍNICAS ESCOLA UNICHRISTUS
                 </h2>
               </ScrollRevealComponent>
@@ -38,7 +38,7 @@ export default function AboutSection() {
                 duration={2000}
                 reset={false}
               >
-                <h1 className="text-[#71CFD5] text-4xl font-sans font-semibold tracking-wider mb-10 ">
+                <h1 className="text-[#71CFD5] text-4xl font-sans font-semibold tracking-wider mb-10 max-lg:text-2xl">
                   Um ótimo lugar para receber atendimento
                 </h1>
               </ScrollRevealComponent>
@@ -50,11 +50,9 @@ export default function AboutSection() {
                 duration={2000}
                 reset={false}
               >
-                <h1 className="text-white text-xl mb-8 ">
-                  A Unichristus Clínicas são clínicas de atendimento médico que
-                  oferece diversos serviços de saúde para a população de
-                  Fortaleza. Contamos com uma equipe de profissionais altamente
-                  qualificados e prontos para atender você e sua família.
+                <h1 className="text-white text-xl mb-8 max-lg:text-base">
+                As Clínicas Unichristus representam a excelência em atendimento médico em Fortaleza, oferecendo uma ampla gama de serviços de saúde de alta qualidade. 
+                Nossa rede de clínicas é um centro de referência que combina atendimento humanizado, tecnologia de ponta e expertise profissional.
                 </h1>
               </ScrollRevealComponent>
             </div>
@@ -84,7 +82,9 @@ export default function AboutSection() {
               ></div>
               <Link
                 to="/clinics"
-                className="flex items-center rounded-xl text-white bg-blue-800 opacity-80  font-medium px-6 py-3 text-2xl transition duration-1000 ease-in-out tracking-tight cursor-pointer hover:text-cyan-200 group hover:scale-105 "
+                className="flex items-center rounded-xl text-white bg-blue-800 opacity-80  font-medium px-6 py-3 text-2xl transition duration-1000 ease-in-out tracking-tight cursor-pointer hover:text-cyan-200 group hover:scale-105 
+                max-lg:text-base
+                "
               >
                 Conheça todas as clínicas
                 <FaLongArrowAltRight className="ml-4" />

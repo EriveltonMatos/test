@@ -119,63 +119,66 @@ export default function Schedule() {
 
             {step === 2 && (
               <form onSubmit={() => setStep(3)}>
-                <div className="mb-4">
-                  <p className="block text-red-500 mb-2 text-xs">
-                    Seus dados estão protegidos conforme as diretrizes da Lei
-                    Geral de Proteção de Dados (LGPD). Garantimos a segurança e
-                    a privacidade de suas informações.
-                  </p>
-                  <p className="block text-gray-600  mb-2 text-sm">
-                    Para realizar o seu cadastro, solicitamos as seguintes
-                    informações: nome completo, data de nascimento e telefone.{" "}
-                  </p>
-                  <label className="block text-gray-600 mb-2 font-semibold" htmlFor="nome">
-                    Nome:
-                  </label>
-                  <input
-                    type="text"
-                    id="nome"
-                    value={nome}
-                    onChange={(e) => setNome(e.target.value)}
-                    className="border border-gray-300 p-3 rounded-lg w-full mb-1 focus:outline-none focus:ring focus:ring-blue-400"
-                    placeholder="Digite seu nome"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-gray-600 mb-2 font-semibold" htmlFor="data">
-                    Data de Nascimento:
-                  </label>
-                  <input
-                    type="date"
-                    id="data"
-                    value={dataNas}
-                    onChange={(e) => setDataNas(e.target.value)}
-                    className="border border-gray-300 p-3 rounded-lg w-full mb-1 focus:outline-none focus:ring focus:ring-blue-400"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    className="block text-gray-600 mb-2 font-semibold"
-                    htmlFor="telefone"
-                  >
-                    Telefone:
-                  </label>
-                  <input
-                    type="text"
-                    id="telefone"
-                    value={telefone}
-                    onChange={(e) => setTelefone(e.target.value)}
-                    className="border border-gray-300 p-3 rounded-lg w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400"
-                    placeholder="Digite seu telefone"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-blue-500 text-white p-3 rounded-lg w-full hover:bg-blue-600 transition duration-300"
+              <div className="mb-4">
+                <p className="block text-red-500 mb-2 text-xs">
+                  Seus dados estão protegidos conforme as diretrizes da Lei
+                  Geral de Proteção de Dados (LGPD). Garantimos a segurança e
+                  a privacidade de suas informações.
+                </p>
+                <p className="block text-gray-600 mb-2 text-sm">
+                  Para realizar o seu cadastro, solicitamos as seguintes
+                  informações: nome completo, data de nascimento e telefone.
+                </p>
+                <label className="block text-gray-600 mb-2 font-semibold" htmlFor="nome">
+                  Nome:
+                </label>
+                <input
+                  type="text"
+                  id="nome"
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                  className="border border-gray-300 p-3 rounded-lg w-full mb-1 focus:outline-none focus:ring focus:ring-blue-400"
+                  placeholder="Digite seu nome"
+                  required // Campo obrigatório
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-600 mb-2 font-semibold" htmlFor="data">
+                  Data de Nascimento:
+                </label>
+                <input
+                  type="date"
+                  id="data"
+                  value={dataNas}
+                  onChange={(e) => setDataNas(e.target.value)}
+                  className="border border-gray-300 p-3 rounded-lg w-full mb-1 focus:outline-none focus:ring focus:ring-blue-400"
+                  required // Campo obrigatório
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-600 mb-2 font-semibold"
+                  htmlFor="telefone"
                 >
-                  Próximo
-                </button>
-              </form>
+                  Telefone:
+                </label>
+                <input
+                  type="text"
+                  id="telefone"
+                  value={telefone}
+                  onChange={(e) => setTelefone(e.target.value)}
+                  className="border border-gray-300 p-3 rounded-lg w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400"
+                  placeholder="Digite seu telefone"
+                  required // Campo obrigatório
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-blue-500 text-white p-3 rounded-lg w-full hover:bg-blue-600 transition duration-300"
+              >
+                Próximo
+              </button>
+            </form>
             )}
 
             {step === 3 && (

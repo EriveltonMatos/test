@@ -6,8 +6,7 @@ import { MdOutlineEmail } from "react-icons/md";
 export default function NavBar() {
   return (
     <div>
-      {/* Primeiro Navbar */}
-      <nav className="bg-sky-50 h-16 flex items-center">
+      <nav className="bg-sky-50 h-16 flex items-center max-sm:hidden">
         <div className="flex items-center w-96 h-48 bg-sky-50 rounded-e-full relative z-50">
           <img
             src={logoClinica}
@@ -17,7 +16,6 @@ export default function NavBar() {
         </div>
         <div className="relative z-10 mx-auto flex">
           <div className="flex space-x-10 ml-96 animate-fade-right">
-            {/* Contatos */}
             <div className="flex items-center space-x-2">
               <FaPhoneVolume className="text-[#26396B] hover:text-gray-300 text-3xl" />
               <div className="flex flex-col">
@@ -33,14 +31,13 @@ export default function NavBar() {
               </div>
             </div>
 
-            {/* Whatsapp */}
             <div className="flex flex-col">
               <div className="flex items-center space-x-2">
                 <FaWhatsapp className="text-[#40C351] hover:text-gray-300 text-3xl" />
                 <div className="flex flex-col">
                   <a
                     href="#"
-                    className="text-black hover:text-gray-300 text-sm"
+                    className="text-black hover:text-gray-300 text-sm "
                   >
                     Whatsapp
                   </a>
@@ -54,7 +51,6 @@ export default function NavBar() {
               </div>
             </div>
 
-            {/* E-mail */}
             <div className="flex flex-col">
               <div className="flex items-center space-x-2">
                 <MdOutlineEmail className="text-black hover:text-gray-300 text-3xl" />

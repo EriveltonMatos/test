@@ -33,7 +33,7 @@ export default function SecondNavbar({ links, logoSrc,  }: SecondNavbarProps) {
       <nav
         className={`${
           isScrolled ? "top-0 shadow-md" : "top-[4rem]"
-        } bg-[#142960] w-full flex justify-end items-center h-16 fixed z-20 transition-all duration-300 ease-in-out bg-opacity-90`}
+        } bg-[#142960] w-full flex justify-end items-center h-16 fixed z-20 transition-all duration-300 ease-in-out bg-opacity-90 max-sm:hidden`}
       >
         <div className="mr-auto mx-72">
           <a
@@ -54,7 +54,7 @@ export default function SecondNavbar({ links, logoSrc,  }: SecondNavbarProps) {
               <a
                 key={index}
                 href={link.href}
-                className="relative text-white hover:text-gray-300 font-semibold cursor-pointer transition group"
+                className="relative text-white hover:text-gray-300 font-semibold cursor-pointer transition group "
               >
                 {link.label}
                 <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-300 transition-all duration-500 ease-out group-hover:w-full"></span>
