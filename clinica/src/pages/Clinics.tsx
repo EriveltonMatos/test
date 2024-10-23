@@ -4,24 +4,23 @@ import clinicaSaude from "../assets/unidades/clinica-saude.jpg";
 import clinicaPsicologia from "../assets/unidades/clinica-psicologia.jpg";
 import clinicaFisioterapia from "../assets/unidades/clinica-fisio.jpg";
 import ClinicComponent from "../components/ClinicComponent";
-import FooterSection from "../components/FooterSection";
+import FooterSection from "../components/sections/FooterSection";
 import NavBar from "../components/Navbar";
 import IconPhone from "../components/IconPhone";
 import ScrollRevealComponent from "../components/scroll-components/ScrollRevealComponent";
 import SecondNavbar from "../components/SecondNavbar";
+import MobileNav from "@/components/MobileNav";
 
 export default function Clinics() {
-  const links = [
-    { href: "/", label: "Voltar", },
-  ];
   return (
     <>
       <div>
         <NavBar />
-        <SecondNavbar links={links} logoSrc={unichristusNavbar}/>
+        <SecondNavbar links={[{ href: "/", label: "Voltar"}]} logoSrc={unichristusNavbar} />
+        <MobileNav links={[{href: "/", label: "Voltar"}]} />
       </div>
-      <section className="bg-gray-100 py-12">
-        <h1 className="text-[#1F2B6C] text-5xl md:text-6xl font-bold mb-8 mt-20 text-center">
+      <section className="py-12 bg-[#F0F9FF]">
+        <h1 className="text-[#1F2B6C] text-4xl md:text-6xl font-bold mb-8 mt-20 text-center">
           Nossas <span className="text-[#159EEC]">Unidades</span>
           <div className="flex justify-center mt-4 space-x-4">
             <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
@@ -172,44 +171,6 @@ export default function Clinics() {
           />
         </ScrollRevealComponent>
 
-        <ScrollRevealComponent
-          origin="bottom"
-          distance="100px"
-          duration={2000}
-          reset={false}
-        >
-          <ClinicComponent
-            imageBackground={clinicaOdonto}
-            imageSrc="https://via.placeholder.com/600x400"
-            title="Unidade Central"
-            description="Nossa unidade central está localizada no coração da cidade, oferecendo fácil acesso e um ambiente moderno."
-            address="Nossa unidade central está localizada no coração da cidade, oferecendo fácil acesso e um ambiente moderno."
-            services={[
-              "Consultas médicas",
-              "Exames laboratoriais",
-              "Fisioterapia",
-              "Vacinação",
-            ]}
-            buttonLink="https://www.google.com/maps"
-            reverse={false}
-          />
-        </ScrollRevealComponent>
-
-        <ClinicComponent
-          imageBackground={clinicaOdonto}
-          imageSrc="https://via.placeholder.com/600x400"
-          title="Unidade Central"
-          description="Nossa unidade central está localizada no coração da cidade, oferecendo fácil acesso e um ambiente moderno."
-          address="Nossa unidade central está localizada no coração da cidade, oferecendo fácil acesso e um ambiente moderno."
-          services={[
-            "Consultas médicas",
-            "Exames laboratoriais",
-            "Fisioterapia",
-            "Vacinação",
-          ]}
-          buttonLink="https://www.google.com/maps"
-          reverse={true}
-        />
       </section>
       <div>
         <FooterSection />

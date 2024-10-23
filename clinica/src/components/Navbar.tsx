@@ -6,7 +6,7 @@ import { MdOutlineEmail } from "react-icons/md";
 export default function NavBar() {
   return (
     <div>
-      <nav className="bg-sky-50 h-16 flex items-center max-sm:hidden">
+      <nav className="bg-sky-50 h-16 flex items-center max-lg:hidden">
         <div className="flex items-center w-96 h-48 bg-sky-50 rounded-e-full relative z-50">
           <img
             src={logoClinica}
@@ -19,12 +19,12 @@ export default function NavBar() {
             <div className="flex items-center space-x-2">
               <FaPhoneVolume className="text-[#26396B] hover:text-gray-300 text-3xl" />
               <div className="flex flex-col">
-                <a href="#" className="text-black hover:text-gray-300 text-sm">
+                <a href="#" className="text-black hover:text-gray-300 text-sm max-xl:text-xs">
                   Contato
                 </a>
                 <a
                   href="#"
-                  className="text-[#26396B] hover:text-gray-300 text-sm font-semibold"
+                  className="text-[#26396B] hover:text-gray-300 text-sm font-semibold max-xl:text-xs"
                 >
                   (85) 99999-9999
                 </a>
@@ -33,17 +33,17 @@ export default function NavBar() {
 
             <div className="flex flex-col">
               <div className="flex items-center space-x-2">
-                <FaWhatsapp className="text-[#40C351] hover:text-gray-300 text-3xl" />
+                <FaWhatsapp className="text-[#40C351] hover:text-gray-300 text-3xl " />
                 <div className="flex flex-col">
                   <a
                     href="#"
-                    className="text-black hover:text-gray-300 text-sm "
+                    className="text-black hover:text-gray-300 text-sm max-xl:text-xs"
                   >
                     Whatsapp
                   </a>
                   <a
                     href="#"
-                    className="text-[#26396B] hover:text-gray-300 text-sm font-semibold"
+                    className="text-[#26396B] hover:text-gray-300 text-sm font-semibold max-xl:text-xs"
                   >
                     (85) 99999-9999
                   </a>
@@ -53,7 +53,7 @@ export default function NavBar() {
 
             <div className="flex flex-col">
               <div className="flex items-center space-x-2">
-                <MdOutlineEmail className="text-black hover:text-gray-300 text-3xl" />
+                <MdOutlineEmail className="text-black hover:text-gray-300 text-3xl max-xl:text-xs" />
                 <div className="flex flex-col">
                   <a
                     href="#"
@@ -63,7 +63,7 @@ export default function NavBar() {
                   </a>
                   <a
                     href="#"
-                    className="text-[#26396B] hover:text-gray-300 text-sm font-semibold"
+                    className="text-[#26396B] hover:text-gray-300 text-sm font-semibold max-xl:text-xs"
                   >
                     lit.unichristus.edu@br
                   </a>

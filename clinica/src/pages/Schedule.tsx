@@ -1,9 +1,7 @@
 import { useState } from "react";
 import footerBackground from "../assets/footer-background.jpg";
 import logoClinica from "../assets/logo-clinica.png";
-import unichristusNavbar from "../assets/u-unichristus.png";
-import { Link } from "react-router-dom";
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import MobileNav from "@/components/MobileNav";
 
 export default function Schedule() {
   const [cpf, setCpf] = useState("");
@@ -39,30 +37,9 @@ export default function Schedule() {
 
   return (
     <>
-      <nav className="bg-[#142960] h-16 flex justify-between items-center px-4">
-        <div className="mr-auto mx-72">
-          <a
-            href="https://www.unichristus.edu.br/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={unichristusNavbar} alt="Logo" className="h-12" />
-          </a>
-        </div>
-        <div className="flex justify-center items-center space-x-20 text-lg mr-20">
-          <div className="mr-40">
-            <Link
-              to="/"
-              className="relative flex gap-3 items-center bg-[#2563EB] text-white font-semibold px-4 py-2 rounded-lg hover:bg-sky-400 transition duration-300 shadow-md hover:shadow-lg"
-            >
-              <FaLongArrowAltLeft/>
-              Voltar
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <MobileNav links={[{ href: "/", label: "Voltar" }]} />
       <div
-        className="relative flex items-center justify-center min-h-screen"
+        className="relative flex items-center justify-center p-3 min-h-screen"
         style={{
           backgroundImage: `url(${footerBackground})`,
           backgroundSize: "cover",
@@ -71,8 +48,8 @@ export default function Schedule() {
       >
         {/* Overlay escuro com mais opacidade para deixar o texto legível */}
         <div className="absolute inset-0 bg-black opacity-70 "></div>
-        <div className="relative flex items-center justify-center min-h-screen ">
-          <div className="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
+        <div className="relative md:w-[110rem] h-full flex items-center justify-center min-h-screen ">
+          <div className="bg-white shadow-md rounded-lg  max-w-md md:w-full p-6 md:mt-0 mt-12">
             <img src={logoClinica} alt="" />
             <h1 className="text-2xl font-bold text-center text-[#2B3E70] mb-4">
               Agendamento de Consulta

@@ -8,6 +8,13 @@ body {
     animation: gradient 5s ease infinite;
 }
 
+.rgb-button2 {
+  background: linear-gradient(45deg, #FF0000, #DB5B18, #FF0000);
+  background-size: 600% 600%;
+  animation: gradient 5s ease infinite;
+}
+
+
 @keyframes gradient {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }

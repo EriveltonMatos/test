@@ -33,7 +33,7 @@ export default function SecondNavbar({ links, logoSrc,  }: SecondNavbarProps) {
       <nav
         className={`${
           isScrolled ? "top-0 shadow-md" : "top-[4rem]"
-        } bg-[#142960] w-full flex justify-end items-center h-16 fixed z-20 transition-all duration-300 ease-in-out bg-opacity-90 max-sm:hidden`}
+        } bg-[#142960] w-full flex justify-end items-center h-16 fixed z-20 transition-all duration-300 ease-in-out bg-opacity-90 max-lg:hidden`}
       >
         <div className="mr-auto mx-72">
           <a
@@ -48,7 +48,7 @@ export default function SecondNavbar({ links, logoSrc,  }: SecondNavbarProps) {
             />
           </a>
         </div>
-        <div className="flex justify-center items-center space-x-20 text-lg mr-20">
+        <div className="flex justify-center items-center space-x-20 text-lg max-xl:text-xs mr-20">
           <div className="flex gap-8">
             {links.map((link, index) => (
               <a

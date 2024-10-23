@@ -40,13 +40,13 @@ export default function ClinicComponent({
         </div>
 
         <div className="lg:w-1/2 p-8 space-y-4">
-          <h2 className="text-4xl font-bold text-white drop-shadow-lg">
+          <h2 className="md:text-4xl text-3xl text-center font-bold text-white drop-shadow-lg">
             {title}
           </h2>
-          <p className="text-lg text-gray-200">{description}</p>
-          <p className="text-lg text-gray-300">{address}</p>
+          <p className="md:text-lg text-gray-200">{description}</p>
+          <p className="md:text-lg text-gray-300">{address}</p>
 
-          <h3 className="text-2xl font-semibold text-white">Serviços:</h3>
+          <h3 className="md:text-2xl font-semibold text-white">Serviços:</h3>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-disc pl-6 mb-6 gap-x-3">
             {services.map((service, index) => (
               <li

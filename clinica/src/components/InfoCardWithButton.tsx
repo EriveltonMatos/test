@@ -64,17 +64,17 @@ export default function InfoCardWithButton({
           <Dialog
             header="Serviços"
             visible={visible}
-            style={{ width: "50vw" }}
+            style={{ width: "auto" }}
             onHide={() => {
               if (!visible) return;
               setVisible(false);
             }}
           >
-            <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-blue-950 p-8 max-w-3xl mx-auto rounded-xl shadow-2xl  ">
-              <h1 className="text-4xl font-extrabold text-white mb-6 flex justify-center p-4 items-center tracking-wide">
+            <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-blue-950 p-8 max-w-3xl mx-auto rounded-xl shadow-2xl">
+              <h1 className="md:text-4xl text-3xl text-center font-extrabold text-white mb-6 flex justify-center p-4 items-center tracking-wide">
                 {titleCard}
               </h1>
-              <p className="text-white text-lg leading-relaxed bg-black bg-opacity-30 p-4 mx-auto rounded-lg shadow-md flex justify-center items-center gap-8 max-lg:flex-col">
+              <p className="text-white md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 mx-auto rounded-lg shadow-md flex justify-center items-center gap-8 max-lg:flex-col">
                 {description}
                 <img
                   src={imageCard}

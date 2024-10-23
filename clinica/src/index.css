@@ -2,8 +2,6 @@
 
 @import 'primereact/resources/themes/lara-light-blue/theme.css';
 
-
-
 @layer tailwind-base {
   @tailwind base;
 }
@@ -30,5 +28,8 @@
 @layer base {
   html {
     @apply scroll-smooth;
+  }
+  :root {
+    --radius: 0.5rem;
   }
 }
