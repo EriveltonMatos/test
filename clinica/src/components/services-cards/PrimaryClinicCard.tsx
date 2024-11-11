@@ -9,7 +9,7 @@ export default function PrimaryClinicCard() {
         Clínica Escola de Atenção Primária - CEAP
         </h1>
   
-        <p className="text-white md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
+        <p className="text-white text-sm md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
         A CEAP - Clínica Escola de Atenção Primária da Unichristus é um espaço de aprendizado e atendimento à comunidade, onde estudantes da área da saúde da Unichristus 
         colocam em prática seus conhecimentos sob a supervisão de profissionais experientes. A clínica oferece uma variedade de serviços de saúde, contribuindo para a 
         formação de futuros profissionais e para o bem-estar da população.

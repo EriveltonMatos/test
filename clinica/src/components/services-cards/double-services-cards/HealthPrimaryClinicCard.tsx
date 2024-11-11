@@ -9,7 +9,7 @@ export default function HealthPrimaryClinicCard() {
          CLÍNICA ESCOLA DE SAÚDE UNICHRISTUS (CES) e na CLÍNICA ESCOLA DE ATENÇÃO PRIMÁRIA (CEAP)
         </h1>
   
-        <p className="text-white md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
+        <p className="text-white text-sm md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
           A <span className="text-[#159EEC]"> Clínica Escola de Saúde (CES) </span>da Unichristus é uma estrutura acadêmica
           equipada para os alunos dos cursos da área de saúde a desenvolverem e
           executarem as atividades práticas tendo uma melhor experiência de
@@ -20,7 +20,7 @@ export default function HealthPrimaryClinicCard() {
           Saúde (SUS) e Prevenção de câncer ginecológico.
         </p>
 
-        <p className="text-white md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
+        <p className="text-white text-sm md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
         A <span className="text-[#159EEC]">CEAP - Clínica Escola de Atenção Primária da Unichristus</span> é um espaço de aprendizado e atendimento à comunidade, onde estudantes da área da saúde da Unichristus 
         colocam em prática seus conhecimentos sob a supervisão de profissionais experientes. A clínica oferece uma variedade de serviços de saúde, contribuindo para a 
         formação de futuros profissionais e para o bem-estar da população.

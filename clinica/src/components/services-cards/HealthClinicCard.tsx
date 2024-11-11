@@ -9,7 +9,7 @@ export default function HealthClinicCard() {
         Clínica Escola de Saúde - CES
       </h1>
 
-      <p className="text-white md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
+      <p className="text-white text-sm md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
         A <span className="text-[#159EEC]">Clínica Escola de Saúde (CES)</span> da Unichristus é uma estrutura acadêmica
         equipada para os alunos dos cursos da área de saúde a desenvolverem e
         executarem as atividades práticas tendo uma melhor experiência de

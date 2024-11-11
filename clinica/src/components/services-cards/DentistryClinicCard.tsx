@@ -9,7 +9,7 @@ export default function DentistryClinicCard() {
         Clínica Escola de Odontologia
       </h1>
 
-      <p className="text-white md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
+      <p className="text-white text-xl md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
         A Clínica Escola de Odontologia (CEO) da Unichristus é um complexo
         acadêmico equipado para os alunos e professores da área de Odontologia
         desenvolverem e executarem as atividades de prevenção da saúde além de

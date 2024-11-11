@@ -1,17 +1,18 @@
-import React from 'react';
-import { Navigate } from 'react-router-dom';
-import { useAuth } from '@/components/api/AuthContext';
+import React from "react";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/components/api/AuthContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Bell, Calendar, FileText, User } from 'lucide-react';
+import { Calendar, FileText, User } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import NavBar from '@/components/Navbar';
-import MobileNav from '@/components/MobileNav';
+import NavBar from "@/components/Navbar";
+import MobileNav from "@/components/MobileNav";
+import { FaArrowLeft } from "react-icons/fa";
 
 interface Exame {
   id: number;
@@ -20,6 +21,15 @@ interface Exame {
   doctor: string;
   pdfUrl: string;
 }
+
+// Função para ordenar os exames por data decrescente
+const sortExamesByDate = (exames: Exame[]) => {
+  return exames.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime();
+  });
+};
 
 const ExameAccordionItem = ({ exame }: { exame: Exame }) => (
   <AccordionItem value={exame.id.toString()} className=" border-blue-100">
@@ -33,7 +43,7 @@ const ExameAccordionItem = ({ exame }: { exame: Exame }) => (
           <div className="flex items-center space-x-4 text-sm text-gray-500">
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-1" />
-              {new Date(exame.date).toLocaleDateString()}
+              {new Date(`${exame.date}T00:00:00`).toLocaleDateString()}
             </div>
             <div className="flex items-center">
               <User className="h-4 w-4 mr-1" />
@@ -46,7 +56,9 @@ const ExameAccordionItem = ({ exame }: { exame: Exame }) => (
     <AccordionContent>
       <div className="p-4 bg-white rounded-lg mt-2">
         <div className="mb-4">
-          <h4 className="text-sm font-medium text-gray-500 mb-2">Visualizar Exame</h4>
+          <h4 className="text-sm font-medium text-gray-500 mb-2">
+            Visualizar Exame
+          </h4>
           <div className="w-full h-[700px] rounded-lg overflow-hidden border border-gray-200">
             <iframe
               src={exame.pdfUrl}
@@ -62,9 +74,27 @@ const ExameAccordionItem = ({ exame }: { exame: Exame }) => (
 
 export default function Dashboard() {
   const [exames] = React.useState<Exame[]>([
-    { id: 1, name: 'Exame de Sangue', date: '2024-10-01', doctor: 'Dr. Silva', pdfUrl: '../src/assets/resultado.pdf' },
-    { id: 2, name: 'Exame de Urina', date: '2024-10-10', doctor: 'Dra. Santos', pdfUrl: '../src/assets/resultado.pdf' },
-    { id: 3, name: 'Raio-X do Tórax', date: '2024-10-15', doctor: 'Dr. Costa', pdfUrl: '../src/assets/resultado.pdf' }
+    {
+      id: 1,
+      name: "Exame de Sangue",
+      date: "2024-10-08",
+      doctor: "Dr. Silva",
+      pdfUrl: "/resultado.pdf",
+    },
+    {
+      id: 2,
+      name: "Exame de Urina",
+      date: "2024-10-20",
+      doctor: "Dra. Santos",
+      pdfUrl: "/resultado.pdf",
+    },
+    {
+      id: 3,
+      name: "Hemograma Completo",
+      date: "2024-10-10",
+      doctor: "Dr. Costa",
+      pdfUrl: "/resultado.pdf",
+    },
   ]);
 
   const { user } = useAuth();
@@ -73,75 +103,80 @@ export default function Dashboard() {
     return <Navigate to="/login" />;
   }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200">
-    <NavBar />
-    <MobileNav links={[{href: "/", label: "Voltar"}]} />
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 mt-12">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Perfil do Usuário */}
-          <Card className="lg:col-span-3 bg-white/50 backdrop-blur">
-            <CardContent className="flex items-center justify-between p-6">
-              <div className="flex items-center space-x-4">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">
-                    {user.username.charAt(0).toUpperCase()}
-                  </span>
-                </div>
-                <div>
-                  <h1 className="text-2xl font-bold">Bem-vindo, {user.username}</h1>
-                  <p className="text-gray-500">Seus exames estão disponíveis abaixo</p>
-                </div>
-              </div>
-              <div className="relative">
-                <Bell className="h-6 w-6 text-gray-600 hover:text-gray-800 cursor-pointer" />
-                <div className="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full" />
-              </div>
-            </CardContent>
-          </Card>
+  // Ordena os exames por data decrescente e pega o último 
+  const sortedExames = sortExamesByDate(exames);
+  const lastExame = sortedExames[0];
 
-          {/* Lista de Exames */}
-          <div className="lg:col-span-2">
+  return (
+    <section className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200">
+      <NavBar />
+      <MobileNav links={[{href: "/", label: "Voltar ao site", icon: <FaArrowLeft /> }]} />  
+      <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 mt-12 ">
+        <div className="mx-auto md:mx-10 px-4 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Perfil do Usuário */}
+            <Card className="lg:col-span-3 bg-white/50 backdrop-blur">
+              <CardContent className="flex items-center justify-between p-6">
+                <div className="flex items-center space-x-4">
+                  <div className="h-16 w-16 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-white">
+                      {user.username.charAt(0).toUpperCase()}
+                    </span>
+                  </div>
+                  <div>
+                    <h1 className="text-2xl font-bold">
+                      Bem-vindo, {user.username}
+                    </h1>
+                    <p className="text-gray-500">
+                      Seus exames estão disponíveis abaixo
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Lista de Exames */}
+            <div className="lg:col-span-2">
+              <Card className="bg-white/50 backdrop-blur">
+                <CardHeader>
+                  <CardTitle>Seus Exames Recentes</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ScrollArea className="h-[60vh]">
+                    <Accordion type="single" collapsible className="space-y-4">
+                      {sortedExames.map((exame) => (
+                        <ExameAccordionItem key={exame.id} exame={exame} />
+                      ))}
+                    </Accordion>
+                  </ScrollArea>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Resumo/Estatísticas */}
             <Card className="bg-white/50 backdrop-blur">
               <CardHeader>
-                <CardTitle>Seus Exames Recentes</CardTitle>
+                <CardTitle>Resumo</CardTitle>
               </CardHeader>
               <CardContent>
-                <ScrollArea className="h-[60vh]">
-                  <Accordion type="single" collapsible className="space-y-4">
-                    {exames.map((exame) => (
-                      <ExameAccordionItem key={exame.id} exame={exame} />
-                    ))}
-                  </Accordion>
-                </ScrollArea>
+                <div className="space-y-4">
+                  <div className="bg-white rounded-lg p-4">
+                    <div className="text-sm text-gray-500">Total de Exames</div>
+                    <div className="text-2xl font-bold">{exames.length}</div>
+                  </div>
+                  <div className="bg-white rounded-lg p-4">
+                    <div className="text-sm text-gray-500">Último Exame</div>
+                    <div className="text-2xl font-bold">
+                      {new Date(
+                        `${lastExame.date}T00:00:00`).toLocaleDateString()}
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
-
-          {/* Resumo/Estatísticas */}
-          <Card className="bg-white/50 backdrop-blur">
-            <CardHeader>
-              <CardTitle>Resumo</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-sm text-gray-500">Total de Exames</div>
-                  <div className="text-2xl font-bold">{exames.length}</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-sm text-gray-500">Último Exame</div>
-                  <div className="text-2xl font-bold">
-                    {new Date(exames[exames.length - 1].date).toLocaleDateString()}
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
-    </div>
-    </div>
+    </section>
   );
 }

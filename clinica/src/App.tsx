@@ -7,7 +7,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import { AuthProvider } from './components/api/AuthContext';
 import { PrivateRoute } from "./components/api/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
-import Report from "./pages/Report";
+import Login from "./pages/Login";
+import EventPage from "./pages/EventPage";
 
 export default function App() {
   return (
@@ -19,7 +20,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/clinics" element={<Clinics />} />
-            <Route path="report" element={<Report />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/events" element={<EventPage /> } />
 
             {/* Rota protegida */}
             <Route
@@ -30,8 +32,6 @@ export default function App() {
                 </PrivateRoute>
               }
             />
-
-            {/* Outra rota protegida */}
             <Route path="/schedule" element={<Schedule />} />
           </Routes>
         </Router>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import footerBackground from "../assets/footer-background.jpg";
 import logoClinica from "../assets/logo-clinica.png";
 import MobileNav from "@/components/MobileNav";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Schedule() {
   const [cpf, setCpf] = useState("");
@@ -37,8 +38,8 @@ export default function Schedule() {
 
   return (
     <>
-      <MobileNav links={[{ href: "/", label: "Voltar" }]} />
-      <div
+        <MobileNav links={[{href: "/", label: "Voltar ao site", icon: <FaArrowLeft /> }]} />  
+        <div
         className="relative flex items-center justify-center p-3 min-h-screen"
         style={{
           backgroundImage: `url(${footerBackground})`,
@@ -48,7 +49,7 @@ export default function Schedule() {
       >
         {/* Overlay escuro com mais opacidade para deixar o texto legível */}
         <div className="absolute inset-0 bg-black opacity-70 "></div>
-        <div className="relative md:w-[110rem] h-full flex items-center justify-center min-h-screen ">
+        <div className="relative md:w-[110rem] h-full flex items-center justify-center min-h-screen  animate-fade">
           <div className="bg-white shadow-md rounded-lg  max-w-md md:w-full p-6 md:mt-0 mt-12">
             <img src={logoClinica} alt="" />
             <h1 className="text-2xl font-bold text-center text-[#2B3E70] mb-4">

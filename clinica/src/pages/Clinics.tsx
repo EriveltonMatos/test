@@ -1,26 +1,54 @@
-import unichristusNavbar from "../assets/u-unichristus.png";
 import clinicaOdonto from "../assets/unidades/clinica-odonto.jpg";
 import clinicaSaude from "../assets/unidades/clinica-saude.jpg";
 import clinicaPsicologia from "../assets/unidades/clinica-psicologia.jpg";
 import clinicaFisioterapia from "../assets/unidades/clinica-fisio.jpg";
 import ClinicComponent from "../components/ClinicComponent";
-import FooterSection from "../components/sections/FooterSection";
+import FooterSection from "../components/home-sections/FooterSection";
 import NavBar from "../components/Navbar";
 import IconPhone from "../components/IconPhone";
-import ScrollRevealComponent from "../components/scroll-components/ScrollRevealComponent";
-import SecondNavbar from "../components/SecondNavbar";
 import MobileNav from "@/components/MobileNav";
+import unichristusAldeota from "../assets/unichristus.jpg";
+import NavbarReturn from "@/components/NavbarReturn";
+import { FaArrowLeft } from "react-icons/fa";
+import { ScrollFromBottom } from "@/components/ScrollComponent";
 
 export default function Clinics() {
   return (
     <>
       <div>
         <NavBar />
-        <SecondNavbar links={[{ href: "/", label: "Voltar"}]} logoSrc={unichristusNavbar} />
-        <MobileNav links={[{href: "/", label: "Voltar"}]} />
+        <NavbarReturn />
+        <MobileNav
+          links={[
+            { href: "/", label: "Voltar ao site", icon: <FaArrowLeft /> },
+          ]}
+        />
       </div>
-      <section className="py-12 bg-[#F0F9FF]">
-        <h1 className="text-[#1F2B6C] text-4xl md:text-6xl font-bold mb-8 mt-20 text-center">
+      <div
+        className="relative w-full bg-blue-100 border-t-2 border-sky-50 mt-16 md:mt-0 animate-fade"
+        style={{
+          backgroundImage: `url(${unichristusAldeota})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-65"></div>
+        <div className="relative z-10 flex md:py-40 py-12 md:text-start md:ml-10 text-white px-4 text-center">
+          <div>
+            <h1 className="md:text-8xl font-bold mb-4 text-4xl p-5">
+              EXCELÊNCIA EM <span className="text-[#159EEC]">SAÚDE</span>,{" "}
+              <br /> PERTO DE <span className="text-[#159EEC]">VOCÊ</span>
+            </h1>
+            <p className="md:text-3xl md:ml-6 ml-4 text-lg mt-4 md:mt-0">
+              Clínicas modernas e equipadas, com profissionais dedicados ao
+              cuidado <br />
+              completo da sua saúde e de sua família.
+            </p>
+          </div>
+        </div>
+      </div>
+      <section className="py-12 bg-gradient-to-br from-blue-100 to-indigo-200">
+        <h1 className="text-[#1F2B6C] text-4xl md:text-6xl font-bold md:mb-8 md:mt-20 mt-5 text-center">
           Nossas <span className="text-[#159EEC]">Unidades</span>
           <div className="flex justify-center mt-4 space-x-4">
             <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
@@ -28,12 +56,7 @@ export default function Clinics() {
             <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
           </div>
         </h1>
-        <ScrollRevealComponent
-          origin="bottom"
-          distance="100px"
-          duration={2000}
-          reset={false}
-        >
+        <ScrollFromBottom>
           <ClinicComponent
             imageBackground={clinicaOdonto}
             imageSrc={clinicaOdonto}
@@ -69,14 +92,9 @@ export default function Clinics() {
             buttonLink="https://www.google.com/maps"
             reverse={false}
           />
-        </ScrollRevealComponent>
+        </ScrollFromBottom>
 
-        <ScrollRevealComponent
-          origin="bottom"
-          distance="100px"
-          duration={2000}
-          reset={false}
-        >
+        <ScrollFromBottom>
           <ClinicComponent
             imageBackground={clinicaSaude}
             imageSrc={clinicaSaude}
@@ -111,14 +129,8 @@ export default function Clinics() {
             buttonLink="https://www.google.com/maps"
             reverse={true}
           />
-        </ScrollRevealComponent>
-
-        <ScrollRevealComponent
-          origin="bottom"
-          distance="100px"
-          duration={2000}
-          reset={false}
-        >
+        </ScrollFromBottom>
+        <ScrollFromBottom>
           <ClinicComponent
             imageBackground={clinicaFisioterapia}
             imageSrc={clinicaFisioterapia}
@@ -144,14 +156,10 @@ export default function Clinics() {
             buttonLink="https://www.google.com/maps"
             reverse={false}
           />
-        </ScrollRevealComponent>
+        </ScrollFromBottom>
 
-        <ScrollRevealComponent
-          origin="bottom"
-          distance="100px"
-          duration={2000}
-          reset={false}
-        >
+        <ScrollFromBottom>
+
           <ClinicComponent
             imageBackground={clinicaPsicologia}
             imageSrc={clinicaPsicologia}
@@ -169,9 +177,8 @@ export default function Clinics() {
             buttonLink="https://www.google.com/maps"
             reverse={true}
           />
-        </ScrollRevealComponent>
-
-      </section>
+        </ScrollFromBottom>
+        </section>
       <div>
         <FooterSection />
         <IconPhone />

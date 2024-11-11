@@ -1,4 +1,3 @@
-import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import { useState } from "react";
 
@@ -55,12 +54,17 @@ export default function InfoCardWithButton({
             {title}
           </h2>
 
-          <Button
-            label="Saiba Mais"
-            icon="pi pi-external-link"
+          <button
             onClick={() => setVisible(true)}
-            style={{ backgroundColor: "#1F2B6C" }}
-          />
+            className="group relative overflow-hidden rounded-lg bg-[#1F2B6C] px-8 py-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95 border border-indigo-500"
+          >
+            <div className="absolute inset-0 flex translate-y-[100%] items-center justify-center bg-white/10 transition-transform duration-300 group-hover:translate-y-[0%]"></div>
+            <div className="relative flex items-center justify-center gap-2 text-white">
+              <i className="pi pi-external-link text-sm transition-transform duration-300 "></i>
+
+              <span className="font-medium">Saiba Mais</span>
+            </div>
+          </button>
           <Dialog
             header="Serviços"
             visible={visible}
@@ -74,7 +78,7 @@ export default function InfoCardWithButton({
               <h1 className="md:text-4xl text-3xl text-center font-extrabold text-white mb-6 flex justify-center p-4 items-center tracking-wide">
                 {titleCard}
               </h1>
-              <p className="text-white md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 mx-auto rounded-lg shadow-md flex justify-center items-center gap-8 max-lg:flex-col">
+              <p className="text-white text-sm md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 mx-auto rounded-lg shadow-md flex justify-center items-center gap-8 max-lg:flex-col">
                 {description}
                 <img
                   src={imageCard}

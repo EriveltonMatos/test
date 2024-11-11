@@ -9,7 +9,7 @@ export default function PsychologyClinicCard() {
         Serviço Escola de Psicologia Aplicada (SEPA)
       </h1>
 
-      <p className="text-white md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
+      <p className="text-white text-sm md:text-lg leading-relaxed bg-black bg-opacity-30 p-4 rounded-lg shadow-md">
       SEPA - Serviço Escola de Psicologia Aplicada da Unichristus é um espaço dedicado à promoção da saúde mental e ao desenvolvimento humano. Através de atendimentos psicológicos gratuitos, 
       realizados por estudantes sob supervisão de profissionais experientes, o SEPA oferece à comunidade diversas modalidades de terapia, como individual, de casal, familiar e em grupo. Além disso, 
       o SEPA realiza atividades de pesquisa e extensão, contribuindo para a formação de futuros psicólogos e para o avanço da ciência na área da psicologia.

@@ -6,26 +6,29 @@ import clinicaFisioterapia from "@/assets/unidades/clinica-fisio.jpg";
 import unitsBackground from "@/assets/units-background.png";
 import clinicaCesiu from "@/assets/unidades/cesiu.jpeg";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import ScrollRevealComponent from "../scroll-components/ScrollRevealComponent";
+import { ScrollFromBottom } from "../ScrollComponent";
 
 export default function UnitsSection() {
   const images = [
     {
       src: clinicaOdonto,
       alt: "Clínica Escola de Odontologia",
-      description: "Rua Vereador Paulo Mamede, 130 - Cocó, Fortaleza - CE, 60192-350",
+      description:
+        "Rua Vereador Paulo Mamede, 130 - Cocó, Fortaleza - CE, 60192-350",
       url: "https://www.google.com/maps/dir/?api=1&destination=Rua+Vereador+Paulo+Mamede,+130+-+Cocó,+Fortaleza+-+CE,+60192-350",
     },
     {
       src: clinicaSaude,
       alt: "Clínica Escola de Saúde",
-      description: "Av. Padre Antônio Tomás, 3404 - Cocó, Fortaleza - CE, 60192-120",
+      description:
+        "Av. Padre Antônio Tomás, 3404 - Cocó, Fortaleza - CE, 60192-120",
       url: "https://www.google.com/maps/dir/?api=1&destination=Av.+Padre+Antônio+Tomás,+3404+-+Cocó,+Fortaleza+-+CE,+60192-120",
     },
     {
       src: clinicaPsicologia,
       alt: "Serviço Escola de Psicologia Aplicada (SEPA)",
-      description: "Av. Des. Moreira, 2120 - Aldeota, Fortaleza - CE, 60170-002",
+      description:
+        "Av. Des. Moreira, 2120 - Aldeota, Fortaleza - CE, 60170-002",
       url: "https://www.google.com/maps/dir/?api=1&destination=Av.+Des.+Moreira,+2120+-+Aldeota,+Fortaleza+-+CE,+60170-002",
     },
     {
@@ -37,13 +40,15 @@ export default function UnitsSection() {
     {
       src: clinicaCesiu,
       alt: "Clínica Escola de Saúde e Imagem (CESIU)",
-      description: "R. Vicente Linhares, 308 - Aldeota, Fortaleza - CE, 60135-270",
+      description:
+        "R. Vicente Linhares, 308 - Aldeota, Fortaleza - CE, 60135-270",
       url: "https://www.google.com/maps/dir/?api=1&destination=R.+Vicente+Linhares,+308+-+Aldeota,+Fortaleza+-+CE,+60135-270",
     },
     {
       src: clinicaFisioterapia,
       alt: "Clínica Escola de Atenção Primária (CEAP)",
-      description: "R. Luís de Miranda, 536 - Benfica, Fortaleza - CE, 60015-330",
+      description:
+        "R. Luís de Miranda, 536 - Benfica, Fortaleza - CE, 60015-330",
       url: "https://www.google.com/maps/dir/?api=1&destination=R.+Lúis+de+Miranda,+536+-+Benfica,+Fortaleza+-+CE,+60015-330",
     },
   ];
@@ -112,53 +117,43 @@ export default function UnitsSection() {
 
   return (
     <>
-    <section id="units">
-      <div
-        className="py-24 bg-blue-100 border-t-2 border-sky-50"
-        style={{
-          backgroundImage: `url(${unitsBackground})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="relative container mx-auto ">
-          <div>
-            <ScrollRevealComponent
-              origin="bottom"
-              distance="100px"
-              duration={1000}
-              reset={false}
-            >
-              <h1 className="text-[#1F2B6C] text-5xl md:text-6xl font-bold mb-8 md:mt-16 text-center">
-                Nossas <span className="text-[#159EEC]">Unidades</span>
-                <div className="flex justify-center mt-4 space-x-4">
-                  <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
-                  <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
-                  <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
-                </div>
-              </h1>
-            </ScrollRevealComponent>
-          </div>
-          <ScrollRevealComponent
-            origin="bottom"
-            distance="100px"
-            duration={1000}
-            reset={false}
-          >
-            <div className="mx-auto ">
-              <Carousel
-                value={images}
-                numVisible={3}
-                numScroll={3}
-                responsiveOptions={responsiveOptions}
-                circular
-                autoplayInterval={5000}
-                itemTemplate={imageTemplate}
-              />
+      <section id="units">
+        <div
+          className="py-24 bg-blue-100 border-t-2 border-sky-50"
+          style={{
+            backgroundImage: `url(${unitsBackground})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="relative container mx-auto ">
+            <div>
+              <ScrollFromBottom>
+                <h1 className="text-[#1F2B6C] text-5xl md:text-6xl font-bold mb-8 md:mt-16 text-center">
+                  Nossas <span className="text-[#159EEC]">Unidades</span>
+                  <div className="flex justify-center mt-4 space-x-4">
+                    <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
+                    <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
+                    <div className="w-3 h-3 bg-[#3575FE] rounded-full hover:scale-150 transition-all"></div>
+                  </div>
+                </h1>
+              </ScrollFromBottom>
             </div>
-          </ScrollRevealComponent>
+            <ScrollFromBottom>
+              <div className="mx-auto ">
+                <Carousel
+                  value={images}
+                  numVisible={3}
+                  numScroll={3}
+                  responsiveOptions={responsiveOptions}
+                  circular
+                  autoplayInterval={5000}
+                  itemTemplate={imageTemplate}
+                />
+              </div>
+            </ScrollFromBottom>
+          </div>
         </div>
-      </div>
       </section>
     </>
   );

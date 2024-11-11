@@ -2,7 +2,11 @@ body {
     font-family: 'Work Sans', sans-serif;
   }
 
-  .rgb-button {
+.Fraunces {
+    font-family: 'Fraunces', serif;
+}
+
+.rgb-button {
     background: linear-gradient(45deg, #00008b, #00ced1, #00008b);
     background-size: 600% 600%;
     animation: gradient 5s ease infinite;
@@ -13,7 +17,6 @@ body {
   background-size: 600% 600%;
   animation: gradient 5s ease infinite;
 }
-
 
 @keyframes gradient {
     0% { background-position: 0% 50%; }

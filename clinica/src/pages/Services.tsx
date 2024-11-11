@@ -1,33 +1,32 @@
 import servicesBackground from "../assets/services-background.png";
 import NavBar from "../components/Navbar";
-import SecondNavbar from "../components/SecondNavbar";
-import unichristusNavbar from "../assets/u-unichristus.png";
-import FooterSection from "@/components/sections/FooterSection";
+import NavbarReturn from "@/components/NavbarReturn";
+import FooterSection from "@/components/home-sections/FooterSection";
 import ServiceTabs from "@/components/ServicesTabs";
 import MobileNav from "@/components/MobileNav";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Services() {
-  const links = [{ href: "/", label: "Voltar" }];
-
-  const mobLink = [{ href: "/", label: "Voltar" }];
+  const mobLink = [{ href: "/", label: "Voltar ao Site", icon: <FaArrowLeft /> }];
 
   return (
     <>
       <section className="bg-[#F0F9FF] w-auto">
         <div>
           <NavBar />
-          <SecondNavbar links={links} logoSrc={unichristusNavbar} />
+          <NavbarReturn />
           <MobileNav links={mobLink} />
         </div>
+        
         <div
-          className="relative w-full bg-blue-100 border-t-2 border-sky-50 mt-16 md:mt-0"
+          className="relative w-full bg-blue-100 border-t-2 border-sky-50 mt-16 md:mt-0  animate-fade"
           style={{
             backgroundImage: `url(${servicesBackground})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-50 "></div>
           <div className="relative z-10 flex md:py-40 py-12 md:text-start md:ml-10 text-white px-4 text-center">
             <div>
               <h1 className="md:text-8xl font-bold mb-4 text-4xl p-5">

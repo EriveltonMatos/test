@@ -20,7 +20,7 @@ export default function ClinicComponent({
   imageBackground,
 }: ClinicComponentProps) {
   return (
-    <div className="container mx-auto mt-16 relative bg-gradient-to-r from-blue-800 to-sky-400 border border-purple-400 rounded-xl shadow-xl overflow-hidden">
+    <div className="container mx-auto mt-16 relative bg-gradient-to-r from-blue-800 to-sky-400 border border-blue-500 rounded-xl shadow-xl overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-50 rounded-xl"></div>
       <div
         className="absolute inset-0 bg-cover bg-center rounded-lg"
