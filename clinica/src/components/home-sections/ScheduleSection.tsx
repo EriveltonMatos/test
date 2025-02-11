@@ -9,10 +9,10 @@ export default function ScheduleSection() {
   return (
     <section
       id="schedule"
-      className="relative flex justify-center items-center bg-gradient-to-r bg-slate-100 text-white overflow-hidden md:p-10 p-5 h-[30rem] md:h-[40rem]"
+      className="relative flex justify-center items-center bg-gradient-to-r bg-[#1A2A6C] text-white overflow-hidden md:p-10 p-5 h-[30rem] md:h-screen"
     >
-      <div className="flex justify-end container md:mx-auto bg-[] relative p-4 md:p-16 h-[24rem] md:h-[35rem] md:p-30 md:w-[80rem] border rounded-2xl shadow-2xl overflow-hidden transition-transform duration-700 ease-in-out">
-        <div className="w-4/4 relative z-20 bg-[#1A2A6C] md:p-12 p-8 rounded-lg md:w-full my-auto md:h-auto h-[auto] shadow-neon-left max-w-lg max-lg:text-center transition-transform transform hover:scale-105 duration-500 ease-in-out border border-[#00FFFF]">
+      <div className="flex justify-end container md:mx-auto bg-slate-100 relative p-4 h-[24rem] md:h-[70vh] md:w-[80rem] border rounded-2xl shadow-2xl overflow-hidden transition-transform duration-700 ease-in-out">
+        <div className="w-4/4 container relative z-20 bg-[#1A2A6C] p-8 md:p-10 rounded-lg md:w-full md:mr-10 my-auto md:h-auto h-[auto] shadow-neon-left max-w-lg max-lg:text-center transition-transform transform hover:scale-105 duration-500 ease-in-out border border-[#00FFFF]">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-4">
             <Sparkles className="w-4 h-4 text-white mr-2" />
             <span className="text-white md:text-sm text-xs font-medium">

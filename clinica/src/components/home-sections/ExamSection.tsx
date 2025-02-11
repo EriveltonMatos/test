@@ -17,21 +17,21 @@ export default function ExamSection() {
   const imageExams = ["Sanguíneos", "Biópsias"];
 
   return (
-    <section id="exam" className="bg-sky-50 md:-mt-24">
-      <div className="container mx-auto max-lg:text-center">
-        <div className="flex justify-center items-center md:p-20 max-lg:flex-col p-0 gap-20">
-          <div className="w-3/4 md:w-1/2 ml-20 max-lg:ml-0 mt-10 md:mt-0">
+    <section id="exam" className="bg-sky-50 md:h-screen">
+      <div className="container mx-auto max-lg:text-center md:h-screen">
+        <div className="flex justify-center items-center md:p-20 max-lg:flex-col p-0 gap-20 md:h-screen">
+          <div className="w-3/4 md:w-1/2 ml-20 max-lg:ml-0 mt-10 ">
             <ScrollFromRight>
               <div className="w-32 h-2 bg-[#1F2B6C] mb-8 mx-auto md:mx-0"></div>
               <div>
-                <h2 className="text-[#1F2B6C] tracking-widest md:text-7xl font-bold mb-12 max-lg:text-center text-4xl">
+                <h2 className="text-[#1F2B6C] tracking-widest md:leading-none md:text-[10vh] font-bold mb-12 md:mb-[6vh] max-lg:text-center text-4xl">
                   CONSULTAR <span className="text-[#159EEC]">EXAMES</span>
                 </h2>
               </div>
             </ScrollFromRight>
             <div>
               <ScrollFromBottom>
-                <h1 className="text-[#212124] mb-8 text-sm md:text-left md:text-xl text-justify">
+                <h1 className="text-[#212124] mb-8 md:mb-[6vh] text-sm md:text-left text-justify md:text-[2.5vh] leading-tight">
                   A Unichristus Clínicas oferece diversos exames laboratoriais e
                   de imagem para você e sua família. Contamos com uma equipe de
                   profissionais altamente qualificados e prontos para atender
@@ -48,9 +48,9 @@ export default function ExamSection() {
                         href="https://unichristus.naja.app/portal/login"
                         target="_blank"
                       >
-                        <button className="rgb-button text-white font-bold py-4 px-8 rounded-3xl shadow-lg border border-white transform transition-transform duration-300 hover:scale-110 flex items-center gap-1 w-full">
-                          <FaXRay className="text-3xl" />
-                          <span className="text-xs md:text-base">
+                        <button className="rgb-button text-white font-bold py-4 px-8 rounded-3xl shadow-lg border border-white transform transition-transform duration-300 hover:scale-110 flex items-center gap-2">
+                          <FaXRay className="md:text-[4vh] text-lg" />
+                          <span className="text- md:text-[2vh]">
                             Exames de Imagem
                           </span>
                         </button>
@@ -59,13 +59,12 @@ export default function ExamSection() {
                             {labExams.map((exam, index) => (
                               <li
                                 key={index}
-                                className="text-white text-xs flex font-medium items-center"
-                              >
+                                className="text-white md:text-[1.8vh] text-sm flex items-center"
+                                >
                                 <FaCircle
-                                  className="text-white mr-2 "
-                                  size={8}
+                                  className="text-white mr-2"
+                                  size={7}
                                 />{" "}
-                                {/* Ícone de círculo vermelho */}
                                 {exam}
                               </li>
                             ))}
@@ -79,8 +78,8 @@ export default function ExamSection() {
                     <div className="border border-[#FF0000] rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-3xl rgb-button2">
                       <Link to="/login">
                         <button className="rgb-button2 text-white font-bold py-4 px-8 rounded-3xl shadow-lg border border-white transform transition-transform duration-300 hover:scale-110 flex items-center gap-1">
-                          <MdBloodtype className="text-3xl" />
-                          <span className="text-xs md:text-base">
+                          <MdBloodtype className="text-lg md:text-[4vh]" />
+                          <span className="text-ls md:text-[2vh] text-base">
                             Exames Laboratóriais
                           </span>
                         </button>
@@ -90,9 +89,9 @@ export default function ExamSection() {
                           {imageExams.map((exam, index) => (
                             <li
                               key={index}
-                              className="text-white text-xs flex items-center"
+                              className="text-white md:text-[1.8vh] text-sm flex items-center"
                             >
-                              <FaCircle className="text-white mr-2" size={8} />{" "}
+                              <FaCircle className="text-white mr-2" size={7} />{" "}
                               {/* Ícone de círculo vermelho */}
                               {exam}
                             </li>

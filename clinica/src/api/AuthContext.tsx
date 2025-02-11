@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<User | null>(null);
 
   const login = (username: string, password: string): boolean => {
-    // Aqui você implementaria a lógica real de autenticação
+    // Aqui é onde vou precisar implementar a lógica real de autenticação
     // Este é apenas um exemplo simplificado
     if (username === "admin" && password === "123456") {
       setUser({ username });

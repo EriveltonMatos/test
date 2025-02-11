@@ -22,7 +22,7 @@ export default function InfoCardWithButton({
       <div
         className="
         relative 
-        w-full h-full rounded-[10px] 
+        md:w-full w-80 h-full rounded-[10px] mx-auto
         shadow-[16px_16px_20px_#0000008c] 
         overflow-hidden
         before:absolute 
@@ -50,19 +50,18 @@ export default function InfoCardWithButton({
             alt={title}
             className="absolute inset-0 w-full h-full object-cover rounded-lg opacity-60"
           />
-          <h2 className="relative flex justify-center text-white text-2xl w-48 font-bold py-2 rounded-md shadow-lg">
+          <h2 className="relative flex justify-center text-white text-2xl md:text-[3vh] w-48 font-bold py-2 rounded-md">
             {title}
           </h2>
 
           <button
             onClick={() => setVisible(true)}
-            className="group relative overflow-hidden rounded-lg bg-[#1F2B6C] px-8 py-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95 border border-indigo-500"
+            className="group relative overflow-hidden rounded-lg bg-[#1F2B6C] px-[5vh] py-[2vh] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 active:scale-95 border border-indigo-500"
           >
             <div className="absolute inset-0 flex translate-y-[100%] items-center justify-center bg-white/10 transition-transform duration-300 group-hover:translate-y-[0%]"></div>
             <div className="relative flex items-center justify-center gap-2 text-white">
               <i className="pi pi-external-link text-sm transition-transform duration-300 "></i>
-
-              <span className="font-medium">Saiba Mais</span>
+              <span className="font-medium md:text-[1.5vh]">Saiba Mais</span>
             </div>
           </button>
           <Dialog

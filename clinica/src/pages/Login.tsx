@@ -1,7 +1,7 @@
 import { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
-import { useAuth } from '@/components/api/AuthContext';
+import { useAuth } from '@/api/AuthContext';
 import { LogIn, ArrowLeft, User, Lock } from 'lucide-react';
 import footerBackground from '@/assets/footer-background.jpg';
 import logoClinicaBranca from '@/assets/logo-branca.png';

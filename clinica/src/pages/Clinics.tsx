@@ -2,6 +2,7 @@ import clinicaOdonto from "../assets/unidades/clinica-odonto.jpg";
 import clinicaSaude from "../assets/unidades/clinica-saude.jpg";
 import clinicaPsicologia from "../assets/unidades/clinica-psicologia.jpg";
 import clinicaFisioterapia from "../assets/unidades/clinica-fisio.jpg";
+import clinicaCesiu from "@/assets/unidades/cesiu.jpeg";
 import ClinicComponent from "../components/ClinicComponent";
 import FooterSection from "../components/home-sections/FooterSection";
 import NavBar from "../components/Navbar";
@@ -61,9 +62,11 @@ export default function Clinics() {
             imageBackground={clinicaOdonto}
             imageSrc={clinicaOdonto}
             title="Clínica Escola de Odontologia"
-            description="A Clínica Escola de Odontologia (CEO) da Unichristus é um complexo acadêmico equipado para os alunos e professores da área de Odontologia desenvolverem e executarem as atividades de prevenção da saúde além de procedimentos odontológicos em vários níveis de complexidade.
-          O espaço conta com mais de 100 equipes odontológicos que permite, em média, o atendimento de 140 pacientes/dia e mais de 2.800/mês. É utilizado tanto nos cursos da graduação como de pós-graduação e dispõe de atendimento clínico gratuito e aberto à comunidade."
-            address="Nossa unidade central está localizada no coração da cidade, oferecendo fácil acesso e um ambiente moderno."
+            description={[
+              "A Clínica Escola de Odontologia da Unichristus (CEO) é um complexo odontológico moderno na qual os alunos de graduação e pós-graduação desenvolvem as mais atuais técnicas ortodônticas orientados por profissionais experientes, com a missão de tratar o paciente de forma completa, trazendo bem-estar e transformando sorrisos.",
+              "São 100 estações odontológicas, onde são realizados, mensalmente, mais de 2800 atendimentos gratuitos e a preços populares nas mais diversas especialidades.",
+            ]}
+            address="Nossa unidade fica no Campus Parque Ecológico, localizado no coração da cidade, oferecendo fácil acesso e ambiente moderno."
             services={[
               "Triagem Odontológica",
               "Promoção da Saúde",
@@ -89,7 +92,7 @@ export default function Clinics() {
               "Saúde e Educação Sexual",
               "Harmonização Orofacial",
             ]}
-            buttonLink="https://www.google.com/maps"
+            buttonLink="https://www.google.com/maps/dir/?api=1&destination=Rua+Vereador+Paulo+Mamede,+130+-+Cocó,+Fortaleza+-+CE,+60192-350"
             reverse={false}
           />
         </ScrollFromBottom>
@@ -99,24 +102,28 @@ export default function Clinics() {
             imageBackground={clinicaSaude}
             imageSrc={clinicaSaude}
             title="Clínica Escola de Saúde"
-            description="A Clínica Escola de Saúde (CES) da Unichristus é uma estrutura acadêmica equipada para os alunos dos cursos da área de saúde a desenvolverem e executarem as atividades práticas tendo uma melhor experiência de aprendizado.    
-          A clínica também realiza atendimentos gratuitos à comunidade, em múltiplas especialidades, de forma integrada e humanizada, além de desenvolver programas como: Serviço de Atenção Especializada (SAE) em IST/AIDS, em parceria com o Sistema Único de Saúde (SUS) e Prevenção de câncer ginecológico."
-            address="Nossa unidade central está localizada no coração da cidade, oferecendo fácil acesso e um ambiente moderno."
+            description={[
+              "Na Clínica Escola de Saúde (CES) da Unichristus, os alunos de Enfermagem, Medicina, Nutrição e Psicologia, realizam atendimentos de alta qualidade com orientação e supervisão de profissionais especialistas, com experiência e renome em sua respectiva área, com o compromisso de oferecer cuidados integrados com foco na humanização e no bem-estar de cada paciente.",
+              "Além dos serviços especializados em diversas áreas da saúde, com foco nos atendimentos Clínicos em Ginecologia e Pediatria. Nossa clínica conta com programas de destaque, como o Serviço de Atenção Especializada (SAE) em IST/AIDS, em parceria com o Sistema Único de Saúde (SUS), e Prevenção ao Câncer Ginecológico, que garantem aos pacientes um cuidado de excelência.",
+              "A CES está estrategicamente localizada no coração da cidade, com fácil acesso e um ambiente moderno, projetado para proporcionar a melhor experiência para você. Aqui, a sua saúde está nas melhores mãos.\n",
+              "O s atendimentos ocorrem de maneira totalmente gratuita e a marcação de consultas para o mês seguinte ocorrem por meio dos telefones 3306-8932 e 3306-8933 com agendas abertas no 1o dia útil de cada mês.\n"
+          ]}
+            address="Nossa unidade central está localizada no endereço: R. Vicente Linhares, 308 - Aldeota, Fortaleza - CE, 60135-270"
             services={[
               "Pediatria",
-              "Psiquiatria",
-              "Ginecologia",
-              "Reumatologia",
-              "Infectologia",
+              "Ginecologia ",
+              "Cardiologia",
+              "Clínica Médica",
               "Dermatologia",
-              "Neurologia",
               "Endocrinologia",
               "Gastrologia",
-              "Pneumologia",
-              "Clínica Médica",
-              "Cardiologia",
               "Geriatria",
+              "Infectologia",
               "Nefrologia",
+              "Neurologia",
+              "Pneumologia",
+              "Psiquiatria",
+              "Reumatologia",
               "Atendimento Psicológico e Psicopedagógico",
               "Consulta de Enfermagem à Criança",
               "Consulta de Enfermagem ao Idoso",
@@ -126,7 +133,7 @@ export default function Clinics() {
               "Consulta de Enfermagem em Ginecologia",
               "Consulta de Enfermagem DM / HAS / Tb / Hanseníase",
             ]}
-            buttonLink="https://www.google.com/maps"
+            buttonLink="https://www.google.com/maps/dir/?api=1&destination=Rua+Vicente+Linhares,+308+-+Aldeota,+Fortaleza+-+CE,+60125-058"
             reverse={true}
           />
         </ScrollFromBottom>
@@ -135,9 +142,9 @@ export default function Clinics() {
             imageBackground={clinicaFisioterapia}
             imageSrc={clinicaFisioterapia}
             title="Clínica Escola de Fisioterapia"
-            description="A Clínica Escola de Fisioterapia da Unichristus é um ambiente acadêmico equipado para alunos do curso de Fisioterapia desenvolverem e executarem as atividades práticas para reabilitação e assistência na atenção primária e secundária em saúde à sociedade.
-          Na Clínica Escola de Fisioterapia ocorrem atendimentos nas seguintes áreas: traumatologia, ortopedia, desportiva, dermatologia, pediatria, reumatologia, cardiologia, pneumologia, ginecologia, obstetrícia, urologia, neurologia, oncologia, craniomandibular e hidroterapia. 
-          No espaço também são realizadas as aulas práticas das disciplinas específicas, além de cursos, palestras, atividades, projetos de extensão e eventos de promoção de saúde."
+            description={["A Clínica Escola de Fisioterapia da Unichristus é um ambiente acadêmico equipado para alunos do curso de Fisioterapia desenvolverem e executarem as atividades práticas para reabilitação e assistência na atenção primária e secundária em saúde à sociedade.",
+              "Na Clínica Escola de Fisioterapia ocorrem atendimentos nas seguintes áreas: traumatologia, ortopedia, desportiva, dermatologia, pediatria, reumatologia, cardiologia, pneumologia, ginecologia, obstetrícia, urologia, neurologia, oncologia, craniomandibular e hidroterapia. No espaço também são realizadas as aulas práticas das disciplinas específicas, além de cursos, palestras, atividades, projetos de extensão e eventos de promoção de saúde.",
+              ]}
             address="Nossa unidade central está localizada no coração da cidade, oferecendo fácil acesso e um ambiente moderno."
             services={[
               "Fisioterapia em Traumato-ortopedia",
@@ -153,20 +160,42 @@ export default function Clinics() {
               "Fisioterapia Cardiovascular",
               "Fisioterapia em Gerontologia",
             ]}
-            buttonLink="https://www.google.com/maps"
+            buttonLink="https://www.google.com/maps/dir/?api=1&destination=Rua+Vereador+Paulo+Mamede+-+Cocó,+Fortaleza+-+CE,+60192-350"
             reverse={false}
           />
         </ScrollFromBottom>
 
         <ScrollFromBottom>
+          <ClinicComponent
+            imageBackground={clinicaCesiu}
+            imageSrc={clinicaCesiu}
+            title="Clínica-Escola de Saúde e Imagem Unichristus (CESIU)"
+            description={[
+              "A Clínica-Escola de Saúde e Imagem Unichristus (CESIU) é um espaço que une ensino na área da saúde, atendimento de excelência e qualidade em diagnóstico por imagem.",
+              "Nosso espaço foi totalmente desenvolvido para que os alunos dos cursos da área da saúde da Unichristus possam acompanhar, em tempo real, os procedimentos de atendimento, aprendendo com profissionais especialistas e tendo como foco o cuidado com o paciente.",
+              "Contamos com equipamentos de última geração para a realização de exames de ressonância magnética, tomografia computadorizada, ultrassonografia e radiografia digital, com o objetivo de proporcionar imagens de alta qualidade e diagnósticos confiáveis.",
+              "A CESIU está estrategicamente localizada no coração da cidade, oferecendo fácil acesso e um ambiente moderno, projetado para proporcionar a melhor experiência para você. Aqui, a sua saúde está em boas mãos.",
+              "Neste início de operação, os agendamentos e tipos de exames estão sendo definidos sob a supervisão direta dos radiologistas, para garantir que realizemos apenas aqueles dentro da nossa expertise. Com a equipe atual (dois radiologistas em quatro turnos semanais), estamos ajustando o fluxo de atendimento da Clínica, mas a expectativa é expandir em breve, incluindo novos colegas e diversificando os exames oferecidos.",
+            ]}
+            address="Nossa unidade central está localizada no endereço: R. Vicente Linhares, 308 - Aldeota, Fortaleza - CE, 60135-270"
+            services={[
+              "Ressonância magnética",
+              "Tomografia computadorizada",
+              "Ultrassonografia",
+              "Radiografia digital",
+            ]}
+            buttonLink="https://www.google.com/maps/dir/?api=1&destination=R.+Vicente+Linhares,+308+-+Aldeota,+Fortaleza+-+CE,+60135-270"
+            reverse={true}
+          />
+        </ScrollFromBottom>
 
+        <ScrollFromBottom>
           <ClinicComponent
             imageBackground={clinicaPsicologia}
             imageSrc={clinicaPsicologia}
             title="Serviço Escola de Psicologia Aplicada (SEPA)"
-            description="O Serviço Escola de Psicologia Aplicada (SEPA) é um espaço dedicado ao curso de Psicologia da Unichristus e conta com oito salas para atendimentos psicológicos gratuitos, por meio de acolhimento individual ou em grupo, além de uma testoteca, espaço que tem como finalidade ofertar à comunidade acadêmica da área de Psicologia um conjunto de instrumentos de medida e avaliação psicológica.
-          A equipe do SEPA é composta por estudantes a partir do 9º ano e oferece atendimentos de segunda à sexta-feira, das 14h às 20h. O público alvo do espaço são crianças, adolescentes e adultos."
-            address="Nossa unidade central está localizada no coração da cidade, oferecendo fácil acesso e um ambiente moderno."
+            description={["O Serviço Escola de Psicologia Aplicada (SEPA) é um espaço dedicado ao curso de Psicologia da Unichristus e conta com oito salas para atendimentos psicológicos gratuitos, por meio de acolhimento individual ou em grupo, além de uma testoteca, espaço que tem como finalidade ofertar à comunidade acadêmica da área de Psicologia um conjunto de instrumentos de medida e avaliação psicológica. A equipe do SEPA é composta por estudantes a partir do 9º ano e oferece atendimentos de segunda à sexta-feira, das 14h às 20h. O público alvo do espaço são crianças, adolescentes e adultos."]}
+            address="Nossa unidade central está localizada no endereço: Av. Des. Moreira, 2120 - Aldeota, Fortaleza - CE, 60170-002"
             services={[
               "Atendimento em grupo",
               "Psicodiagnóstico",
@@ -174,8 +203,8 @@ export default function Clinics() {
               "Orientação Profissional",
               "Atendimento individual de crianças, adolescentes, adultos e idosos",
             ]}
-            buttonLink="https://www.google.com/maps"
-            reverse={true}
+            buttonLink="https://www.google.com/maps/dir/?api=1&destination=Av.+Des.+Moreira,+2120+-+Aldeota,+Fortaleza+-+CE,+60170-002"
+            reverse={false}
           />
         </ScrollFromBottom>
         </section>

@@ -6,6 +6,18 @@ export default {
   ],
   theme: {
   	extend: {
+		fontSize: {
+			'1vh': '1vh',
+			'2vh': '2vh',
+			'3vh': '3vh',
+			'4vh': '4vh',
+			'5vh': '5vh',
+			'6vh': '6vh',
+			'7vh': '7vh',
+			'8vh': '8vh',
+			'9vh': '9vh',
+			'10vh': '10vh',
+		  },
   		keyframes: {
   			updown: {
   				'0%, 100%': {
